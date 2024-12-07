@@ -10,12 +10,12 @@ export default function Home() {
     <div style={{ padding: '20px' }}>
       <header>
         <h1 style={{ textAlign: 'center' }}>Welcome to My Portfolio</h1>
-        <p style={{ textAlign: 'center' }}>Hi, I'm Peter Wang, a Software Engineer (Data Analytics/Science + Full-Stack Developer).</p>
+        <p style={{ textAlign: 'center' }}>Hi, I&apos;m Peter Wang, a Software Engineer (Data Analytics/Science + Full-Stack Developer).</p>
       </header>
       <section>
         <h2>About Me</h2>
         <p>
-          I'm passionate about creating dynamic websites and applications that
+          I&apos;m passionate about creating dynamic websites and applications that
           offer great user experiences. I specialize in JavaScript, React, and
           Node.js.
         </p>
