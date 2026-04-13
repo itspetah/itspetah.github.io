@@ -22,7 +22,7 @@ const PERSONAL_NOTE = {
   label: "WHAT I'M WORKING ON",
   text: `Brushing up on full-stack and building projects using both data and full-stack
 Staying consistent in Leetcoding
-Learning: How to use Raspberry Pi to set up my own Minecraft server 
+Learning: How to set up my own Minecraft server with a Raspberry Pi 
 Reading: Grokking Algorithms`,
 };
 
@@ -60,8 +60,11 @@ const WORK = [
     period:     "2023 - 2025", 
     bullets: [],
   },
+];
+
+const EDUCATION = [
   {
-    role:       "B.S. Computer Science @ ",
+    role: "B.S. Computer Science @ ",
     company:    "CUNY College of Staten Island",
     companyUrl: "https://www.csi.cuny.edu/",
     badge:      null,
@@ -129,7 +132,7 @@ export default function Home() {
               <div className="photo-wrap" style={{ background: card, border: `1px solid ${bdr}`, color: dim, textAlign: "center", padding: "16px" }}>
                 {ME.photo
                   ? <img src={ME.photo} alt={ME.photoAlt} />
-                  : "currently self-conscious about photos, will add one later :)"
+                  : "will add picture later :)"
                 }
               </div>
               <h1 className="name">{ME.name}</h1>
@@ -175,7 +178,29 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-            )}
+              )}
+              {/* Education */}
+<div>
+  <p className="sec-label" style={{ color: dim, borderColor: bdr }}>EDUCATION</p>
+  <div className="work-list">
+    {EDUCATION.map((e, i) => (
+      <div key={i}>
+        <div className="work-header">
+          <div>
+            <span className="work-role">{e.role} </span>
+            <span className="work-company" style={{ color: dim }}>{e.company}</span>
+          </div>
+          <span className="work-period" style={{ color: dim }}>{e.period}</span>
+        </div>
+        {e.bullets.length > 0 && (
+          <ul className="work-bullets" style={{ color: dim }}>
+            {e.bullets.map((b, j) => <li key={j}>{b}</li>)}
+          </ul>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
 
               {/* Work */}
               <div>
