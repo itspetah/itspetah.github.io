@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,5 +19,298 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: .65;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 999;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 3px;
+  border: 1px solid;
+  background: transparent;
+  transition: opacity .2s;
+  letter-spacing: .04em;
+}
+
+.toggle-btn:hover {
+  opacity: .6;
+}
+
+.outer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 32px 80px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.left {
+  position: sticky;
+  top: 56px;
+}
+
+.photo-wrap {
+  width: 240px;
+  height: 240px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  margin-bottom: 10px;
+}
+
+.left-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.tagline {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.quip {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.sec-label {
+  font-size: 11px;
+  letter-spacing: .12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid;
+}
+
+.note-text {
+  font-size: 14px;
+  white-space: pre-line;
+}
+
+.ach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ach-row {
+  display: flex;
+  gap: 10px;
+}
+
+.ach-bullet {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.ach-head {
+  font-weight: 600;
+}
+
+.ach-link {
+  font-size: 12px;
+}
+
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.work-role {
+  font-weight: 600;
+}
+
+.work-company {
+  font-size: 13px;
+}
+
+.work-period {
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.work-bullets {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  list-style: none;
+}
+
+.work-bullets li {
+  font-size: 13px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.work-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+}
+
+.proj-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.proj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.proj-name {
+  font-weight: 600;
+}
+
+.proj-period {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.proj-detail {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.proj-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 7px;
+}
+
+.proj-tag {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  border: 1px solid;
+}
+
+.proj-links {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.skills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 0;
+}
+
+.skill-item {
+  font-size: 13px;
+  margin-right: 6px;
+}
+
+.skill-item::after {
+  content: ' ·';
+}
+
+.skill-item:last-child::after {
+  content: '';
+}
+
+.footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .left {
+    position: static;
+  }
+
+  .photo-wrap {
+    width: 110px;
+    height: 110px;
+  }
+
+  .outer {
+    padding: 40px 20px 60px;
+  }
 }
