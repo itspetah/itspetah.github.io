@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Software Engineer specialising in Full-Stack Development, Data Analytics & Data Engineering. Based in New York.",
 
   // ── Canonical URL ────────────────────────────────────────
-  metadataBase: new URL("https://itspetah.github.io"), // 👉 confirm this matches your live URL
+  metadataBase: new URL("https://itspetah.github.io"),
 
   // ── Open Graph (LinkedIn, iMessage, Slack previews) ──────
   openGraph: {
@@ -68,6 +68,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f3b984f6-d42c-446a-b477-8d1bf307c25a"
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
